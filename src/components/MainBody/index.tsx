@@ -8,15 +8,13 @@ interface MainBodyProps{
     
 }
 class MainBody extends React.PureComponent<MainBodyProps>{
-    constructor(props: MainBodyProps){
-        super(props);
-    }
+
     getComponent(currentTab: string){
         if(currentTab === "About Me"){
             return <AboutMe/>
         } else if(currentTab === "Portfolio"){
             return <Portfolio/>
-        } else if(currentTab === "Rerch Me"){
+        } else if(currentTab === "Reach Me"){
             return <ReachMe/>
         } else{
             return <Profile/>
@@ -26,7 +24,12 @@ class MainBody extends React.PureComponent<MainBodyProps>{
         const {currentTab } = this.props;
         
         return(
-            this.getComponent(currentTab)
+            <>
+            <h2 className='justify-content-start'>{currentTab}</h2>
+            <div className='d-flex'>
+            {this.getComponent(currentTab)}
+            </div>
+            </>
         );
     }
 }

@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+mypic{
+  display: flex;
+  margin-top : 4;
+}
+.mypic img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  text-align: left;
+  justify-content: start;
+}
+
+.myintro h4{
+  text-align: right;
+  font-style: italic;
+  justify-content: end;
+}
+
+.myprofile{
+  justify-content: start;
+}

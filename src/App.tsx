@@ -11,18 +11,17 @@ function App() {
     document.title = title;
   },[currentTab]);
   return (
-    <div className="App">
-      <header className="d-inline">
+    <>
+      <header className="d-flex flex-column">
        <Header tabItems={tabItems}  setCurrentTab={setCurrentTab}/>
-       <h1> Tab select : {currentTab}</h1>
       </header>
-      <main className='body'>
+      <main>
         <MainBody currentTab={currentTab}/>
       </main>
-      <footer>
+      <footer className="fixed-bottom">
         <Footer/>
       </footer>
-    </div>
+    </>
   );
 }
 

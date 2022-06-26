@@ -33,3 +33,26 @@ mypic{
 .myprofile{
   justify-content: start;
 }
+
+.form{
+  border: 1px solid blue;
+  padding: 1rem;
+  margin : 1rem;
+}
+
+
+.form input{
+  display: block;
+  margin: 1rem 0;
+}
+
+.form textarea{
+  display: block;
+  margin: 1rem 0;
+}
+
+.form button{
+  display: block;
+  margin: 1rem 0;
+}
+

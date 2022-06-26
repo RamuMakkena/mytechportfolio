@@ -1,20 +1,16 @@
 import * as React from 'react';
 import { validateEmail } from '../../utils/helpers/helpers';
 
+type ReachMeState = {email: string, name: string, message: string, errorMessage: string}
 
-class ReachMe extends React.Component<{},{email: string, name: string, message: string, errorMessage: string}>{
-    constructor(props: any){
-        super(props);
-        this.state = {
-            email : "",
-            name: "",
-            message : "",
-            errorMessage : ""
-        }
-    }
+class ReachMe extends React.Component<{},ReachMeState>{
+    state : ReachMeState = {
+        email: "", 
+        name: "", 
+        message: "", 
+        errorMessage: ""}
     handleInputChange (e: any) {
         // Getting the value and name of the input which triggered the change
-
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
@@ -32,18 +28,21 @@ class ReachMe extends React.Component<{},{email: string, name: string, message: 
     handleFormSubmit (e: any) {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-    
+        const {email, name, message } = this.state;
+        console.log("we are here");
+        console.log(email, name, message);
         // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-        if (validateEmail(!this.state.email) ) {
+        
+        if (!validateEmail(email) ) {
           this.setState({errorMessage: 'Email is invalid'});
           return;
         }
-        if(!this.state.name){
+        if(!name){
             this.setState({errorMessage: 'Name is required'});
             return;
         }
     
-        if(!this.state.message){
+        if(!message){
             this.setState({errorMessage: 'Message is required'});
             return;
         }
@@ -52,6 +51,7 @@ class ReachMe extends React.Component<{},{email: string, name: string, message: 
         this.setState({name: ''});
         this.setState({email: ''});
         this.setState({message: ''});
+        this.setState({errorMessage: ''});
       };
 
 
@@ -64,25 +64,25 @@ class ReachMe extends React.Component<{},{email: string, name: string, message: 
         <input
           value={this.state.email}
           name="email"
-          onChange={this.handleInputChange}
+          onChange={this.handleInputChange.bind(this)}
           type="email"  
           placeholder="email"
         />
         <input
           value={this.state.name}
           name="name"
-          onChange={this.handleInputChange}
+          onChange={this.handleInputChange.bind(this)}
           type="text"
-          placeholder="username"
+          placeholder="Name"
         />
         <input
           value={this.state.message}
           name="message"
-          onChange={this.handleInputChange}
+          onChange={this.handleInputChange.bind(this)}
           type="textArea"
           placeholder="message"
         />
-        <button type="button" onClick={this.handleFormSubmit}>Submit</button>
+        <button type="button" onClick={this.handleFormSubmit.bind(this)}>Submit</button>
       </form>
       {this.state.errorMessage && (
         <div>

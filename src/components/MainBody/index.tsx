@@ -24,12 +24,10 @@ class MainBody extends React.PureComponent<MainBodyProps>{
         const {currentTab } = this.props;
         
         return(
-            <>
-            <h2 className='justify-content-start'>{currentTab}</h2>
-            <div className='d-flex'>
+            <div>
+            <h2>{currentTab}</h2>
             {this.getComponent(currentTab)}
             </div>
-            </>
         );
     }
 }

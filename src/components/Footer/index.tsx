@@ -25,13 +25,17 @@ class Footer extends React.Component{
     }
     render() {
         return(
-            <div className='d-flex justify-content-between align-items-center bg-dark text-white pr-2'>
-                <h3 className='d-inline '>Ramu makkena</h3>
-                <FaFacebookF className="mr-2 ml-2" onClick={() => this.handleFooterClick("FB")}/>
-                <FaInstagram className="mr-2 ml-2"  onClick={() => this.handleFooterClick("IN")}/>
-                <FaLinkedin  className="mr-2 ml-2"  onClick={() => this.handleFooterClick("LI")}/>
-                <FaGithub className="mr-2 ml-2"  onClick={() => this.handleFooterClick("GH")}/>
-            </div>
+
+                < >
+                {/* <div > */}
+                    <h3 className="ps-3 bg-dark">Ramu makkena</h3>
+                    <FaFacebookF  onClick={() => this.handleFooterClick("FB")}/>
+                    <FaInstagram   onClick={() => this.handleFooterClick("IN")}/>
+                    <FaLinkedin    onClick={() => this.handleFooterClick("LI")}/>
+                    <FaGithub  onClick={() => this.handleFooterClick("GH")}/>
+                </>
+            
+            // <div className="footerSection"></div>
         );
     }
 }

@@ -10,9 +10,14 @@ class Header extends React.PureComponent<HeaderProps>{
         
         const {tabItems,  setCurrentTab} = this.props;
         return(
-            <div className='justify-content-between'>
-                <h1 className='d-inline'>Ramu Makkena</h1>
-                <NavBar tabItems={tabItems}  setCurrentTab={setCurrentTab}/>
+            <div className='d-inline-flex justify-content-sm-start justify-content-lg-between align-content-center bg-dark text-light flex-wrap col-sm-12 col-md-12 col-lg-12 bg-dark'>
+                
+                <div className='justify-content-sm-center justify-content-lg-start bg-dark'>
+                <h1 className="bg-dark">Ramu Makkena</h1>
+                </div>
+                <div className='justify-content-between bg-dark' >
+                    <NavBar tabItems={tabItems}  setCurrentTab={setCurrentTab}/>
+                </div>
             </div>
         );
     }

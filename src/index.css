@@ -1,19 +1,23 @@
-body {
+/* Style sheet for my Portfolio */
+* {
+  font-family: open-sans-regular;
+  background: #293434;
+}
+/* main {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
-mypic{
-  display: flex;
+.mypic{
   margin-top : 4;
 }
 .mypic img{
@@ -24,8 +28,14 @@ mypic{
   justify-content: start;
 }
 
+.projectImage{
+  height: 40%;
+  width: 40%;
+
+}
+
 .myintro h4{
-  text-align: right;
+  text-align: left;
   font-style: italic;
   justify-content: end;
 }
@@ -34,19 +44,15 @@ mypic{
   justify-content: start;
 }
 
-.form{
-  border: 1px solid blue;
-  padding: 1rem;
-  margin : 1rem;
+
+
+.body {
+  background: #293434;
+  color: white;
 }
 
-
-.form input{
-  display: block;
-  margin: 1rem 0;
-}
-
-.form textarea{
+.form input, textarea{
+  width: 90%;
   display: block;
   margin: 1rem 0;
 }
@@ -56,3 +62,56 @@ mypic{
   margin: 1rem 0;
 }
 
+.project{
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.projectHeader{
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  visibility: hidden;
+}
+
+.projectHeader a {
+  text-decoration: none;
+  
+}
+.project:hover > .projectHeader{
+  visibility: visible;
+}
+
+@media screen and (max-width: 980px){
+  .project{
+    justify-content: center;
+    align-items: flex-end;
+    position:relative;
+  }
+  .projectHeader{
+
+    position:absolute;
+    justify-content: center;
+    align-items: flex-end;
+    visibility: visible;
+}  
+}
+
+
+/* 
+.footerSection{
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: #222831 !important;
+  background-color: #222831;
+  justify-content: space-evenly;
+}
+
+.footerSection h3,span{
+  display:inline;
+  background: #222831 !important;
+  align-content: center;
+} */

@@ -6,7 +6,7 @@ class Profile extends React.Component {
     return (
       <div className="myprofile">
         <h3>
-          <a href="http://google.com">Click Here</a> to get my profile
+          <a href="https://drive.google.com/file/d/1cP8QcU_QVOxJCemO2XXWXQi8Uja-VgK2/view?usp=sharing">Click Here</a> to get my profile
         </h3>
         <div className="skillset">
           <div className="skillSubHeader">

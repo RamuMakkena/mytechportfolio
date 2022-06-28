@@ -23,7 +23,7 @@ function App() {
         <MainBody currentTab={currentTab} />
       </main>
       {/* <footer className="fixed-bottom pl-3 pr-3"> */}
-      <footer className="d-flex col-sm-12 col-md-12 col-lg-12 bg-dark text-light justify-content-between align-items-center pe-3 fix-bottom">
+      <footer className="d-flex col-sm-12 col-md-12 col-lg-12 bg-dark text-light justify-content-between align-items-center pe-3 fixed-bottom">
         <Footer />
       </footer>
     </div>

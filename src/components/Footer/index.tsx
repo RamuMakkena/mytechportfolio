@@ -27,7 +27,6 @@ class Footer extends React.Component{
         return(
 
                 < >
-                {/* <div > */}
                     <h3 className="ps-3 bg-dark">Ramu makkena</h3>
                     <FaFacebookF  onClick={() => this.handleFooterClick("FB")}/>
                     <FaInstagram   onClick={() => this.handleFooterClick("IN")}/>

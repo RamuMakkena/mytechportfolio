@@ -50,8 +50,8 @@ class Portfolio extends React.Component {
       {
         name: "myportfolio",
         repo: "mytechportfolio",
-        liveURL: "",
-        imageURL: "RamuMakkena.jpg",
+        liveURL: "https://ramumakkena.github.io/mytechportfolio/",
+        imageURL: "myprofile.png",
         majorSkill: "React",
       },
       {

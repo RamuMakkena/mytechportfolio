@@ -4,6 +4,8 @@ import mypic from '../../assets/images/RamuMakkena.jpg';
 class AboutMe extends React.Component{
     render() {
         return(
+            // A simple about me section with a picture. This needs to improve.
+            //Created two simple css classes for the same
             <div className='m-3'>
                 <div className="mypic">
                     <img src={mypic} alt="Ramu Makkena"></img>

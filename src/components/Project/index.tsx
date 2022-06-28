@@ -8,7 +8,7 @@ interface ProjectProps{
     majorSkill: string
 }
 class Project extends React.PureComponent<ProjectProps>{
-
+// Actual project component
     getRepo(reponame:string){
         return "https://github.com/RamuMakkena/"+reponame;
     }

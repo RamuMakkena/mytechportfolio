@@ -2,6 +2,8 @@ import * as React from 'react';
 import {FaFacebookF, FaInstagram, FaLinkedin, FaGithub} from "react-icons/fa";
 
 class Footer extends React.Component{
+    //Opening links to respective social profiles when we click on the icons,
+    // opening links on the go instead of an anchor tag
     handleFooterClick(target:string){
         switch(target){
             case "FB":
@@ -25,7 +27,7 @@ class Footer extends React.Component{
     }
     render() {
         return(
-
+        // Footer section with name and social media profiles
                 < >
                     <h3 className="ps-3 bg-dark">Ramu makkena</h3>
                     <FaFacebookF  onClick={() => this.handleFooterClick("FB")}/>

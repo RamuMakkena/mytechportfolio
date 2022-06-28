@@ -22,7 +22,7 @@ class MainBody extends React.PureComponent<MainBodyProps>{
     }
     render(){
         const {currentTab } = this.props;
-        
+  // Based on the currentTab value from the props, we are rendering the main section      
         return(
             <div>
             <h2>{currentTab}</h2>

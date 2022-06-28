@@ -7,7 +7,7 @@ interface HeaderProps{
 class Header extends React.PureComponent<HeaderProps>{
 
     render () {
-        
+        // Building Header with Name and inserting navbar into the header. Maintianing current tab to keep track of active tab to render in main page
         const {tabItems,  setCurrentTab} = this.props;
         return(
             <div className='d-inline-flex justify-content-sm-start justify-content-lg-between align-content-center bg-dark text-light flex-wrap col-sm-12 col-md-12 col-lg-12 bg-dark'>

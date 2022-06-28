@@ -70,6 +70,8 @@ class ReachMe extends React.Component<{}, ReachMeState> {
 
   render() {
     return (
+
+      //reach me form need to implement 
       <form className="border border-info col-sm-12, col-md-12, col-lg-4 text-center m-5 p-3">
         
           <input

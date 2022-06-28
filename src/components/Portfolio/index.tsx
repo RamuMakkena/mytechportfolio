@@ -1,6 +1,5 @@
 import * as React from "react";
 import Project from "../Project";
-// import { FaGithub } from "react-icons/fa";
 
 interface ProjectProps {
   name: string;
@@ -13,39 +12,40 @@ interface ProjectProps {
 class Portfolio extends React.Component {
 
 
-
+// BUilding repo link dynamically based on repo name
     getRepo(reponame:string){
         return "https://github.com/RamuMakkena/"+reponame;
     }
   render() {
+    // List of projects we would like to render
     let projects: ProjectProps[] = [
       {
         name: "Run Buddy",
         repo: "run-buddy",
         liveURL: "https://ramumakkena.github.io/run-buddy/",
         imageURL: "runbuddy.png",
-        majorSkill: "React",
+        majorSkill: "HTML, CSS",
       },
       {
         name: "Trip Planner",
         repo: "TripPlanner",
         liveURL: "https://ramumakkena.github.io/TripPlanner/",
         imageURL: "tripplanner.png",
-        majorSkill: "React",
+        majorSkill: "HTML CSS JS",
       },
       {
         name: "CodEZ",
         repo: "group-project2-codEZ",
         liveURL: "https://cod-ez-community.herokuapp.com/api/tips/",
         imageURL: "codez.png",
-        majorSkill: "React",
+        majorSkill: "Node JS, Bootstrap, MySql",
       },
       {
         name: "budget tracker",
         repo: "budgettracker",
         liveURL: "https://ramu-makkena-budget-tracker.herokuapp.com/",
         imageURL: "budgettracker.png",
-        majorSkill: "React",
+        majorSkill: "nodejs, mysql,pwa",
       },
       {
         name: "myportfolio",
@@ -59,15 +59,13 @@ class Portfolio extends React.Component {
         repo: "taskinator",
         liveURL: "https://ramumakkena.github.io/taskinator/",
         imageURL: "taskinator.png",
-        majorSkill: "React",
+        majorSkill: "nodejs",
       },
     ];
 
     return (
-      // <div className='d-flex flex-row  flex-wrap justify-content-center mb-3 p-3'>
-      //         {projects.map(project =><div className='p-2 mb-5 col-sm-5 col-md-5 project'> <Project name={project.name} repo={project.repo} liveURL={project.liveURL} imageURL={project.imageURL} majorSkill={project.majorSkill}/> </div>) }
-      // </div>
-      <div className="d-flex flex-row  flex-wrap justify-content-center">
+      //Rendering actual portfolio section, we are calling each project details to a separate Project component 
+<div className="d-flex flex-row  flex-wrap justify-content-center">
         {projects.map((project) => (
           <div className="d-flex col-sm-12 col-md-6 col-lg-5 m-2  project">
             <Project name={project.name} repo={project.repo} liveURL={project.liveURL} imageURL={project.imageURL} majorSkill={project.majorSkill}/>

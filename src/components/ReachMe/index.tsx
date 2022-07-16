@@ -67,6 +67,7 @@ class ReachMe extends React.Component<{}, ReachMeState> {
     this.setState({ errorMessage: "" });
     this.setState({ successMessage: "Communitcation sent" });
   }
+  
 
   render() {
     return (
@@ -81,6 +82,7 @@ class ReachMe extends React.Component<{}, ReachMeState> {
             type="email"
             placeholder="email"
             className="col-12 bg-light m-2 border-0 form-control-lg"
+            data-toggle="tooltip" data-placement="top" title="Email is required"
           />
         
           <input
@@ -90,6 +92,7 @@ class ReachMe extends React.Component<{}, ReachMeState> {
             type="text"
             placeholder="Name"
             className="col-12 bg-light m-2 form-control-lg"
+            data-toggle="tooltip" data-placement="top" title="Name is required"
           />
 
           <textarea
@@ -98,6 +101,7 @@ class ReachMe extends React.Component<{}, ReachMeState> {
             onChange={this.handleInputChange.bind(this)}
             placeholder="message"
             className="col-12 bg-light m-2 form-control-lg"
+            data-toggle="tooltip" data-placement="top" title="Message please"
           />
 
           <button className="btn btn-primary col-3 m-2 form-control-lg" type="button" onClick={this.handleFormSubmit.bind(this)}>

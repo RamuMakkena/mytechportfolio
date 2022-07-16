@@ -20,6 +20,13 @@ class Portfolio extends React.Component {
     // List of projects we would like to render
     let projects: ProjectProps[] = [
       {
+        name: "Hello World",
+        repo: "hello-world",
+        liveURL: "https://ut-hello-world.herokuapp.com/",
+        imageURL: "HelloWorld.png",
+        majorSkill: "React, NodeJS",
+      },
+      {
         name: "Run Buddy",
         repo: "run-buddy",
         liveURL: "https://ramumakkena.github.io/run-buddy/",
